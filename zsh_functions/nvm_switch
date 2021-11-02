@@ -1,0 +1,12 @@
+#!/bin/bash
+function nvm_switch() {
+  if [ "$1" = old ]
+  then
+    nvm use 8.9.4
+  elif [ "$1" = current ]
+  then
+    nvm use --lts
+  else
+    echo "invalid usage: use "nvm_switch old | current""
+  fi
+}
