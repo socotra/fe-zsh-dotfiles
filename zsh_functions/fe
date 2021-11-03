@@ -106,13 +106,16 @@ function fe() {
 			select mode in start install quit; do
 				case $mode in
 				start)
+					echo "Starting config studio"
 					nvm_switch old
-					export API_URL=https://nameless-forest-80000.herokuapp.com/http://develop.socotra.com
+					export API_URL=https://nameless-forest-80000.herokuapp.com/https://api.develop.socotra.com
+					export LOAD_ASSETS_URL=https://nameless-forest-80000.herokuapp.com/https://studio.develop.socotra.com
 					cd $REPO_ROOT/socotra-stack/source/stack-config-manager || exit
+					npm run create-assets
 					npm run start-dev
 					;;
 				install)
-					echo "Installing config-studio"
+					echo "Installing config studio"
 					nvm_switch old
 					cd $REPO_ROOT/socotra-stack/source/stack-config-manager || exit
 					npm install
