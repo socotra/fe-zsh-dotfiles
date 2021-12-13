@@ -74,18 +74,20 @@ function fe() {
 				case $mode in
 				start)
 					echo "Starting FEV2"
+					nvm use stable
 					export API_URL=https://nameless-forest-80000.herokuapp.com/https://api.develop.socotra.com
 					export LOAD_ASSETS_URL=https://nameless-forest-80000.herokuapp.com/https://studio.develop.socotra.com
 					cd $REPO_ROOT/frontend-v2 || exit
-					npm run start-dev
+					npm run start
 					;;
 				minikube_start)
 					echo "Starting FEV2 in minikube env"
+					nvm use stable
 					export TENANT_HOSTNAME=minikube-configeditor.co.minikube
 					export API_URL=http://host.default:8080
 					export LOAD_ASSETS_URL=http://host.default:8080
 					cd $REPO_ROOT/frontend-v2 || exit
-					npm run start-dev
+					npm run start:minikube
 					;;
 				install)
 					echo "Installing FEV2"
@@ -110,6 +112,7 @@ function fe() {
 					nvm_switch old
 					export API_URL=https://nameless-forest-80000.herokuapp.com/https://api.develop.socotra.com
 					export LOAD_ASSETS_URL=https://nameless-forest-80000.herokuapp.com/https://studio.develop.socotra.com
+					export FE_V2_URL=develop.socotra.com
 					cd $REPO_ROOT/socotra-stack/source/stack-config-manager || exit
 					npm run create-assets
 					npm run start-dev
