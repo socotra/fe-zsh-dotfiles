@@ -2,7 +2,7 @@
 
 Scripts for making frontend development easier at Socotra
 
-Helpful getting started tutorial this repo is based on can be found here: https://scriptingosx.com/2019/06/moving-to-zsh/
+If you haven't already, please work through [this guide first](https://socotra.atlassian.net/wiki/spaces/ENG/pages/2287075338/Front+End+Developer+Setup).
 
 ## Installation
 
@@ -33,13 +33,6 @@ export GITHUB_APITOKEN=FromGitHub
 
 Restart Terminal and enjoy!
 
-## Recommended Extensions
-
-[shell-format](https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format): Formatter for shell scripts
-
-[ShellCheck](https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck): Linter for shell scripts
-
-
 
 ## Usage
 
@@ -63,18 +56,11 @@ Now using node v8.9.4 (npm v5.6.0)
 Example usage: `fe`
 
 ```shell
-% fe
-1) fev1
-2) fev2
-3) configstudio
-4) quit
-Select a repo: 1
-1) watch
-2) host
-3) minikube_host
-4) minikube_watch
-5) install
-6) build
-7) quit
-Select a mode for FEV1: 1
+√ ~ % fe
+1) fev1            2) fev2            3) configstudio    4) quit            
+Select a repo: 2
+1) start           2) minikube_start  3) install         4) quit            
+Select a mode for FEV2: 1
+Starting FEV2
+Now using node v17.2.0 (npm v8.1.4)
 ```
