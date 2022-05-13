@@ -10,11 +10,8 @@ source $(brew --prefix nvm)/nvm.sh
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export REPO_ROOT=$HOME/Code/socotra # or your preference
 
-# nvm 
+# nvm
 NVM_DIR=~/.nvm
-
-# Ruby stuff
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # like `nvm` (for Ruby)
 
 # secret access variables (from 1password and git)
 export AWS_ACCESS_KEY_ID=From1Password
@@ -23,7 +20,6 @@ export GA_GTAG=G-From1Password
 
 export GITHUB_USERNAME=GitHubUsermname
 export GITHUB_APITOKEN=FromGitHub
-
 
 # env variables
 export VERSION=1.2
@@ -34,6 +30,12 @@ export CUSTOM_ASSETS_URL=css/
 export NODE_ENV='development' # only sane default
 export PATH=./node_modules/.bin:$PATH
 export LOCAL_ENV=true
+
+# Ruby stuff
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # like `nvm` (for Ruby)
+
+# Python stuff
+eval "$(pyenv init --path)"
 
 # optional
 
