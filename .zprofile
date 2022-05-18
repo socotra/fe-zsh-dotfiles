@@ -4,22 +4,14 @@ fpath+=$ZDOTDIR/zsh_functions # (this is this repo's path)
 # PATH: Defines the default command path.
 PATH=./node_modules/.bin:$PATH
 PATH=$HOME/go/bin:$PATH
-source $(brew --prefix nvm)/nvm.sh
 
 # set REPO_ROOT as desired; install Java 8, or comment-out:
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export REPO_ROOT=$HOME/Code/socotra # or your preference
 
 # nvm
-NVM_DIR=~/.nvm
-
-# secret access variables (from 1password and git)
-export AWS_ACCESS_KEY_ID=From1Password
-export AWS_SECRET_ACCESS_KEY=From1Password
-export GA_GTAG=G-From1Password
-
-export GITHUB_USERNAME=GitHubUsermname
-export GITHUB_APITOKEN=FromGitHub
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # env variables
 export VERSION=1.2
